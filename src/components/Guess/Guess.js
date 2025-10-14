@@ -3,7 +3,7 @@ import React from "react";
 import { range } from "../../utils";
 import { checkGuess } from "../../game-helpers";
 
-function Guess({ value = "", answer }) {
+function Guess({ value = "", answer, handleGameResult }) {
 	const result = value.length === 5 ? checkGuess(value, answer) : null;
 
 	return (
